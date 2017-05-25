@@ -9,11 +9,35 @@
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
   </head>
   <body bgcolor="#000000" class="bg_contact">
-    <p>
-      <img src="/assets/logo_n.png" id="logo" >
-    </p>
-    <p>
-      <b>&#8728; CONTACT &#8728;</b>
-    </p>
+
+    <!-- COLLAPSE MENU CALL :: manda llamar el menú desplegable desde app/viewa/layouts/_navbar.html.erb -->
+    <%= render :partial => 'layouts/navbar' %>
+
+    <!-- TEXT MOTION EFFECT -->
+    <div class="content">
+      <div class="content__container">
+        <p class="content__container__text">
+          Be
+        </p>
+        <p class="content__container__final__text">
+          than your excuses
+        </p>
+        <ul class="content__container__list">
+          <li class="content__container__list__item">stronger ...</li>
+          <li class="content__container__list__item">faster ...</li>
+          <li class="content__container__list__item">smartest ...</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <p class="info">
+          alux.cervantes@gmail.com <font id="sign1">&#10687;</font> 04455.60.93.79.52 <font id="sign2">&#10687;</font> skype: mario.cervantes 
+        </p>
+    </div>
+
+    <!-- FOOTER :: manda llamar desde app/viewa/layouts/_footer.html.erb -->
+    <%= render :partial => 'layouts/footer' %>
+
   </body>
 </html>

@@ -2,10 +2,13 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def help
+  def plan
   end
 
-  def about
+  def nutrition
+  end
+
+  def motivation
   end
 
   def gallery

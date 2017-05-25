@@ -1,0 +1,294 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// SITE VARIABLES ---------------------------------------------
+  $black: #000000;
+  $brand_orange: #f58514;
+  $low_grey: light-grey;
+  $min-grey: #A7A7A7;
+
+// SITE BACKGROUNDS -------------------------------------------
+  .bg_home {
+  /* The background image used */
+    background-image: url(gym_w6.jpg);
+  /* If we want to repeat the image in the background */
+    background-repeat: no-repeat;
+  /* Full screen */
+    background-size: cover;
+  /* black color in background */
+    background-color: $black;
+  }
+  .bg_plan {
+    background-image: url(gym_w7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $black;
+  }
+  .bg_nutrition {
+    background-image: url(gym_w3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $black;
+  }
+  .bg_motivation {
+    background-image: url(gym_w1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $black;
+  }
+  .bg_gallery {
+    background-image: url(gym_w4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $black;
+  }
+  .bg_contact {
+    background-image: url(gym_w2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $black;
+  }// -------------------------------------------------
+
+// HOME : LOGO/SLOGAN -----------------------------------------
+  .brand {
+    width: 100%;
+  }
+  .nav_home {
+    margin-top: 20%;
+    margin-right: 55%;
+  }
+  .sl_home {
+      font-family: 'Dhurjati', sans-serif;
+      font-size: 30px;
+      color: $brand_orange;
+  }// -------------------------------------------------
+
+// HOME : REGISTER POP UP WINDOW ------------------------------
+  #btn1 {
+    border: none;
+    background: none;
+    opacity: .1;
+    margin-right: 78%;
+
+  }
+  #why {
+    text-align: center;
+    color: $min-grey;
+  }
+  #confirmlogin {
+    background-color: $brand_orange;
+    border: none;
+    width: 15%;
+    border-radius: 0px 10px 0px 10px;
+  }
+  #confirmsignin {
+    background-color: $brand_orange;
+    border: none;
+    width: 15%;
+    border-radius: 0px 10px 0px 10px;
+  }
+  .modal-footer {
+    background-color: $min-grey;
+  }
+  #cancel_btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0;
+  }
+  #alias_signin, #psswrd__signin {
+    color: $min-grey;
+  }
+  #email_login, #alias_login, #psswrd_login, #c_psswrd_login {
+    color: $min-grey;
+  }
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px dotted $min-grey;
+    box-sizing: border-box;
+    text-align: center;
+}// -------------------------------------------------
+
+// CONTACT : TEXT EFFECT --------------------------------------
+  .content {
+    position: absolute;
+    top: 42%;
+    left: 60%;
+    transform: translate(-17%, -20%);
+    height: 160px;
+    overflow:hidden;
+    
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    line-height: 40px;
+    color: grey;
+  
+      &__container {
+        font-weight: 600;
+        overflow: hidden;
+        height: 40px;
+        padding: 0 40px;
+
+      &__text {
+        display: inline;
+        float: left;
+        margin: 0;
+      }
+    
+      &__final__text {
+        display: inline;
+        padding-left: 210px;
+        float: right;
+        margin: 0;
+      }
+
+      &__list {
+        margin-top: 10;
+        padding-left: 60px; // espacio entre el "be" y la lista con motion
+        text-align: left;
+        list-style: none;
+        
+        -webkit-animation-name: change;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-iteration-count: infinite;
+        animation-name: change;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+
+        &__item {
+          line-height: 40px;
+          margin:0;
+          color: $brand_orange;
+        }
+      }
+    }
+  }
+
+  @-webkit-keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+  }
+
+  @-webkit-keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  }
+
+  @-o-keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+  }
+
+  @-o-keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  }
+
+  @-moz-keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+  }
+
+  @-moz-keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  }
+
+  @keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+  }
+
+  @keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  }// -------------------------------------------------
+
+// CONTACT INFO -----------------------------------------------
+  .info {
+    position: absolute;
+    top: 370px;
+    left: 56%;
+    font-size: 17px;
+    color: #444444;
+  }
+  #sign1, #sign2 {
+    color: $brand_orange;
+  }// -------------------------------------------------
+
+// ALL : COLLAPSE MENU ----------------------------------------
+  body {
+      padding-top: 20px; // espacio entre barras de menú y app name
+  }
+
+  .menu-bar {
+    position: absolute;
+    top: 10px; // espacio entre top y barras de menú
+    left: 50%;
+    height: 13px; // zona sensible de las barras [fondo]
+    margin-left: -10px;
+    background-color: rgba(0,0,0,0);
+  }
+
+  .bars {
+    display: block;
+    width: 20px;
+    height: 3px;    
+    background-color: $brand_orange;
+    box-shadow: 0 5px 0 $brand_orange, 0 10px 0 $brand_orange;
+  }
+
+  .menu {
+    display: none; 
+    width: 100%;
+    padding: 10px 10px 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .menu ul {
+    margin-bottom: 0;
+  }
+  .menu a {
+    color: white; 
+    text-transform: uppercase;
+    opacity: 0.2;
+  }
+  .menu a:hover {
+    text-decoration: none;
+    opacity: .3;
+  }
+  .text-center {
+    color: $brand_orange;
+    font-size: 20px;
+  }// -------------------------------------------------
+
+// ALL : FOOTER -----------------------------------------------
+  .footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 2px;
+    color: $low_grey;
+    background-color: black;
+    border-radius: 0px 0px 0px 0px;
+    text-align: center;
+  }// ------------------------------------------------

@@ -1,5 +1,5 @@
 <!-- PROVIDE THE NAME IN THE TAG :: THE REST OF THE TEXT IS IN :: APP/VIEWS/LAYOUTS/APPLICATIONS.HTML.ERB -->
-<% provide(:title, "GALLERY") %>
+<% provide(:title, "NUTRITION") %>
 
 <!DOCTYPE html>
 <html>
@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
   </head>
-  <body bgcolor="#000000" class="bg_gallery">
+  <body bgcolor="#000000" class="bg_nutrition">
 
-    <!-- COLLAPSE MENU CALL :: manda llamar el menú desplegable desde app/viewa/layouts/_navbar.html.erb -->
-    <%= render :partial => 'layouts/navbar' %>
+  <!-- COLLAPSE MENU CALL :: manda llamar el menú desplegable desde app/viewa/layouts/_navbar.html.erb -->
+  <%= render :partial => 'layouts/navbar' %>
 
-    <!-- FOOTER :: manda llamar desde app/viewa/layouts/_footer.html.erb -->
+  <!-- FOOTER :: manda llamar desde app/viewa/layouts/_footer.html.erb -->
   <%= render :partial => 'layouts/footer' %>
-
+   
   </body>
 </html>

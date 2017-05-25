@@ -4,17 +4,195 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- FONT STYLE -->
+    <!-- GOOGLE FONT STYLE LINKS-->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
+
+    <!-- BOOTSTRAP RESPONSIVE TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   </head>
-  <!-- FILE BACKGROUND COLOR -->
-  <body bgcolor="#000000" class="bg_home">
-    <p>
-      <img src="/assets/logo_n.png" id="logo" >
-    </p>
-    <p>
-      <b>be fitness &#8728; be great &#8728; be you</b>
-    </p>
+
+  <!-- FILE BACKGROUND COLOR FOR CSS -->
+  <body class="bg_home">
+
+    <!-- LOGO & SLOGAN -->
+    <div class="brand">
+    <nav class="nav_home">
+      <center>
+        <ul type="none">
+          <li><img src="/assets/logo_n.png" id="logo_home" height="80"></li>
+          <li><b class="sl_home">be fitness &#8728; be great &#8728; be you</b></li>
+        </ul>
+      </center>
+    </nav>
+    </div>
+
+    <!-- Button trigger modal -->
+    <div class="container"> 
+      <center>
+        <button class="btn btn-primary btn-lg" id="btn1" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">welcome</button>
+     </center>
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <br>
+          <center>
+          <img src="/assets/icon workout.png" id="emoji" height="120">
+          </center>
+          <br>
+        <div class="bs-example bs-example-tabs">
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#signin" data-toggle="tab">sign in</a></li>
+            <li class=""><a href="#signup" data-toggle="tab">log in</a></li>
+            <li class=""><a href="#why" data-toggle="tab">why?</a></li>
+          </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+
+        <div class="tab-pane fade in" id="why">
+        <p>We need this information so that you can receive all access to the site and its contents. Rest assured that your information is safe</p>
+        <p><center>¡¡ thanks !!</p>
+        <br>&#8867; administrator &#8866;<a mailto:href="alux.cervantes@gmail.com"> </a>alux.cervantes@gmail.com</a></p>
+
+        </div>
+        <div class="tab-pane fade active in" id="signin">
+            <form class="form-horizontal">
+            <fieldset>
+
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <center>
+                <label id="alias_signin" class="control-label" for="userid">alias:</label>
+              </center>
+
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="arnold" class="input-medium" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <center>
+                <label id="psswrd__signin" class="control-label" for="passwordinput">password:</label>
+              </center>
+
+              <div class="controls">
+                <center>
+                  <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+                </center>
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <!-- <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <center>
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                  remember me
+                  </center>
+                </label>
+              </div>
+            </div> -->
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignin"></label>
+
+              <div class="controls">
+                <center>
+                <button id="confirmsignin" name="signin" class="btn btn-success">ok</button>
+                </center>
+              </div>
+
+            </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal">
+            <fieldset>
+
+            <!-- log in Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <center>
+              <label id="email_login" class="control-label" for="Email">email:</label>
+              </center>
+
+              <div class="controls">
+                <input id="Email" name="Email" class="form-control" type="text" placeholder="arnold.schwarzenegger@ejemplo.com" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <center>
+              <label id="alias_login" class="control-label" for="userid">alias:</label>
+              </center>
+
+              <div class="controls">
+                <input id="userid" name="userid" class="form-control" type="text" placeholder="arnold" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <center>
+              <label id="psswrd_login" class="control-label" for="password">password:</label>
+              </center>
+
+              <div class="controls">
+                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <center>
+              <label id="c_psswrd_login" class="control-label" for="reenterpassword">confirm password:</label>
+              </center>
+
+              <div class="controls">
+                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+              </div>
+            </div>           
+            
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmlogin"></label>
+
+              <div class="controls">
+                <center>
+                <button id="confirmlogin" name="confirmsignup" class="btn btn-success">ok</button>
+                </center>
+              </div>
+
+            </div>
+            </fieldset>
+            </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button id="cancel_btn" type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER :: manda llamar desde app/viewa/layouts/_footer.html.erb -->
+  <%= render :partial => 'layouts/footer' %>
+
   </body>
 </html>
