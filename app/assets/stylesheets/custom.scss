@@ -64,12 +64,14 @@
   }// -------------------------------------------------
 
 // HOME : REGISTER POP UP WINDOW ------------------------------
+  #window {
+    margin-top: 7%;
+  }
   #btn1 {
     border: none;
     background: none;
     opacity: .1;
     margin-right: 78%;
-
   }
   #why {
     text-align: center;
@@ -102,15 +104,20 @@
   #email_login, #alias_login, #psswrd_login, #c_psswrd_login {
     color: $min-grey;
   }
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+  }
   input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px dotted $min-grey;
     box-sizing: border-box;
     text-align: center;
-}// -------------------------------------------------
+  }
+  #psswrd__signin, #passwordinput, #reenterpassword, #password {
+    text-align: center;
+  }// -------------------------------------------------
 
 // CONTACT : TEXT EFFECT --------------------------------------
   .content {
@@ -291,4 +298,4 @@
     background-color: black;
     border-radius: 0px 0px 0px 0px;
     text-align: center;
-  }// ------------------------------------------------
+  }// -----------------------------------------------
