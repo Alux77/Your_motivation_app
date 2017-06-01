@@ -6,6 +6,13 @@
   $brand_orange: #f58514;
   $low_grey: light-grey;
   $min-grey: #A7A7A7;
+  $red: #E1332D;
+  $white: #fff;
+  @mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+  }// -------------------------------------------------
 
 // SITE BACKGROUNDS -------------------------------------------
   .bg_home {
@@ -47,9 +54,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $black;
+  }
+  .bg_show {
+    // background-image: url(gym_w3.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-color: $black;
+  }
+  .bg_new {
+    background-color: $black;
   }// -------------------------------------------------
 
-// HOME : LOGO/SLOGAN -----------------------------------------
+// HOME : LOGO/SLOGAN/LINKS -----------------------------------
   .brand {
     width: 100%;
   }
@@ -61,62 +77,67 @@
       font-family: 'Dhurjati', sans-serif;
       font-size: 30px;
       color: $brand_orange;
+  }
+  .new_link_b {
+    position: absolute;
+    left: 320px;
+    width: 10%;
+    th {
+      text-decoration: none;
+      text-align: center;
+      #sign_l, #log_l {
+        text-decoration: none;
+      }
+    }
   }// -------------------------------------------------
 
-// HOME : REGISTER POP UP WINDOW ------------------------------
-  #window {
-    margin-top: 7%;
+// NEW : REGISTER FORM ----------------------------------------
+  .row_new {
+      position: absolute;
+      top: 100px;
+      left: 1032px;
+      width: 400px;
+      height: 380px;
   }
-  #btn1 {
-    border: none;
-    background: none;
-    opacity: .1;
-    margin-right: 78%;
+  input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 90%;
+    margin-bottom: 5px;
+    @include box_sizing;
   }
-  #why {
-    text-align: center;
-    color: $min-grey;
+  input {
+    height: auto !important;
   }
-  #confirmlogin {
-    background-color: $brand_orange;
-    border: none;
-    width: 15%;
-    border-radius: 0px 10px 0px 10px;
-  }
-  #confirmsignin {
-    background-color: $brand_orange;
-    border: none;
-    width: 15%;
-    border-radius: 0px 10px 0px 10px;
-  }
-  .modal-footer {
-    background-color: $min-grey;
-  }
-  #cancel_btn {
-    background: none;
-    border: none;
+  #tt_form {
     color: white;
-    padding: 0;
   }
-  #alias_signin, #psswrd__signin {
-    color: $min-grey;
+  #error_explanation {
+    color: red;
+      ul {
+        color: red;
+        text-align: center;
+        list-style-type: none;
+      }
   }
-  #email_login, #alias_login, #psswrd_login, #c_psswrd_login {
-    color: $min-grey;
+  .field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
   }
-  input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px white inset;
   }
-  input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  #psswrd__signin, #passwordinput, #reenterpassword, #password {
-    text-align: center;
+  .bck {
+    position: absolute;
+    top: 0px;
+    left: 1020px;
+    background-color: $brand_orange;
+    width: 25%;
+    height: 100%;
+    opacity: 1;
+    img {
+      position: absolute;
+      left: 42%;
+      top: 70%;
+    }
   }// -------------------------------------------------
 
 // CONTACT : TEXT EFFECT --------------------------------------
@@ -230,6 +251,108 @@
     83.3%,95.96% {transform:translate3d(0,-25%,0);}
   }// -------------------------------------------------
 
+// SHOW : TEXT EFFECT -----------------------------------------
+  .content2 {
+    font-family: 'Lato', sans-serif;
+    font-size:   20px;
+    line-height: 40px;
+    color:       grey;
+  
+      &__container {
+        font-weight: 600;
+        overflow:    hidden;
+        height:      40px;
+        padding:     0 20px;
+
+      &__text {
+        display: inline;
+        margin:  0px;
+      }
+    
+      &__final__text {
+        display:      inline;
+        padding-left: 115px; // espacio entre el "than your excuses" y la lista con motion
+        margin:       0;
+      }
+
+      &__list {
+        margin-top:   10;
+        padding-left: 230px; // espacio entre el "be" y la lista con motion
+        text-align:   left;
+        list-style:   none;
+        
+        -webkit-animation-name:            change;
+        -webkit-animation-duration:        10s;
+        -webkit-animation-iteration-count: infinite;
+        animation-name:                    change;
+        animation-duration:                10s;
+        animation-iteration-count:         infinite;
+
+        &__item {
+          line-height: 40px;
+          margin:      0;
+          color:       $brand_orange;
+        }
+      }
+    }
+  }
+
+  @-webkit-keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+  }
+
+  @-webkit-keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  }
+
+  @-o-keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+  }
+
+  @-o-keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  }
+
+  @-moz-keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+  }
+
+  @-moz-keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  }
+
+  // @keyframes opacity {
+  //   0%, 100% {opacity:0;}
+  //   50% {opacity:1;}
+  // }
+
+  // @keyframes change {
+  //   0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  //   16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  //   33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  //   49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  //   66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  //   83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  // }// -------------------------------------------------
+
 // CONTACT INFO -----------------------------------------------
   .info {
     position: absolute;
@@ -298,4 +421,166 @@
     background-color: black;
     border-radius: 0px 0px 0px 0px;
     text-align: center;
-  }// -----------------------------------------------
+  }// ----------------------------------------------
+
+// DEBUG :: MUESTRA LA INFO DEL STATUS DE LA APLICACIÓN -------
+  .debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
+    text-align: center;
+    opacity: .3;
+  }// --------------------------------------------
+
+// SHOW :: PARTIAL IMAGE VIEW -------------------------------- 
+  .img_container {
+    width: 100%;
+    overflow: hidden;
+  }
+  .img_part {
+     width: 100%;
+     height: auto;
+     margin: -110px -5px -230px -5px;
+  }// ---------------------------------------------
+
+// SHOW :: PLAN BUTTONS ---------------------------------------
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+  .Button__textWrapper, .Button__text, .Button__icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+  .Button__text, .Button__icon, .Button__icon1 {
+    -webkit-transition: top 500ms;
+    transition: top 500ms;
+  }
+  .Button {
+    display: inline-block;
+    position: relative;
+    background-color: #272727;
+    color: grey;
+    font-size: 1.7rem;
+    border-radius: 5px;
+    width: 110px;
+    height: 40px;
+    text-align: center;
+    -webkit-transition: background-color 500ms, -webkit-transform 100ms;
+    transition: background-color 500ms, -webkit-transform 100ms;
+    transition: background-color 500ms, transform 100ms;
+    transition: background-color 500ms, transform 100ms, -webkit-transform 100ms;
+  }
+  .Button__textWrapper {
+    overflow: hidden;
+  }
+  .Button__text {
+    line-height: 37px;
+    top: 0;
+  }
+  .Button__icon {
+    top: 100%;
+    background: url("/assets/credit-card.png") no-repeat center center;
+  }
+  .Button::before {
+    content: attr(data-tooltip);
+    width: 90px;
+    height: 60px;
+    background-color: $brand_orange;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: .25em;
+    line-height: 60px;
+    bottom: 90px;
+    left: calc(50% - 45px);
+  }
+  .Button::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: $brand_orange;
+    left: calc(50% - 10px);
+    bottom: 50px;
+  }
+  .Button::before, .Button::after {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    visibility: hidden;
+  }
+  .Button:hover {
+    background-color: grey;
+  }
+  .Button:hover .Button__text {
+    top: -100%;
+  }
+  .Button:hover .Button__icon {
+    top: 0;
+  }
+  .Button:hover .Button__icon1 {
+    top: 0;
+  }
+  .Button:hover::before, .Button:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .Button:hover::after {
+    bottom: 60px;
+  }
+  .Button:hover::before {
+    bottom: 80px;
+  }
+  .Button:active {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }// -------------------------------------------
+
+// SHOW :: CHECKBOXES & FORM ----------------------------------
+  .container_body {
+    background-color: white;
+  }
+  .body_t {
+    width: 100%;
+  }
+  // th {
+  //   border: 1px dotted grey;
+  //   height: 400px;
+  // }
+  #tt {
+    color: grey;
+  }
+  #tt1, #tt3 {
+    color: grey;
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  }
+  #submit {
+    font-family: 'Dhurjati', sans-serif;
+    width: 40px;
+    background-color: $brand_orange;
+    border: none;
+    border-radius: 5px 0px 5px 0px;
+    color: white;
+  }
+  .inf_1 {
+    width: 66%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }// -------------------------------------------

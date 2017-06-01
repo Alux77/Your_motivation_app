@@ -1,2 +1,64 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<!-- PROVIDE THE NAME IN THE TAG :: THE REST OF THE TEXT IS IN :: APP/VIEWS/LAYOUTS/APPLICATIONS.HTML.ERB -->
+<% provide(:title, "SIGNUP") %>
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body bgcolor="#000000" class="bg_new">
+
+  <div class="img_container">
+      <center>
+        <img class="img_part" src="/assets/gym_w1.jpg" width="50%">
+      </center>
+    </div>
+
+    <div class="bck">
+      <center>
+      <img src="/assets/cup.png">
+      </center>
+    </div>
+
+    <div class="row_new">
+      <center>
+        <h1 id="tt_form">Sign up</h1>
+        <br>
+          <%= form_for(@user, url: signup_path) do |f| %>
+          <%= render 'shared/error_messages' %>
+
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        <br><br>
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+        <br>
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+        <br>
+            <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <br><br>
+          <%= f.submit "Create my account", class: "btn btn-primary" %>
+          <% end %>
+      </center>
+    </div>
+
+</body>
+</html>
